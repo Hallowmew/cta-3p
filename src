@@ -1,0 +1,75 @@
+
+import random
+
+
+input = 1
+Mutatingwe1 = (random.uniform(-1.0, 1.0))
+
+print("input is ", input)
+an1 = 1
+an2 = 1
+an3 = 1
+
+we1 = 0.5
+we2 = 0.5
+we3 = 0.5
+we4 = 0.5
+we5 = 0.5
+we6 = 0.5
+#Mutate hidden layer an weight 
+we1 = we1 + Mutatingwe1
+Mutatingwe2 = (random.uniform(-1.0, 1.0))
+we2 = we2 + Mutatingwe2
+Mutatingwe3 = (random.uniform(-1.0, 1.0))
+we3 = we3 + Mutatingwe3
+Mutatingwe4 = (random.uniform(-1.0, 1.0))
+we4 = we4 + Mutatingwe4
+Mutatingwe5 = (random.uniform(-1.0, 1.0))
+we5 = we5 + Mutatingwe5
+Mutatingwe6 = (random.uniform(-1.0, 1.0))
+we6 = we6 + Mutatingwe6
+
+
+
+
+#Determine if output variable is close to 0 or 1
+
+"""anWeightTable = {we1, we2, we3, we4, we5, we6}"""
+
+
+
+"""#custom an weight
+we1 = 1.0309918219534056
+we2 = 0.8401276132551692
+we3 =  0.019047360083455533
+we4 =  0.4480085038570376
+we5 = 0.9593162877491308
+we6 = -0.45227313244956213"""
+
+
+an1 = an1 * we1
+an2 = an2 * we2
+an3 = an3 * we3
+an1 = an1 * we4
+an2 = an2 * we5
+an3 = an3 * we6
+output = an1 + an2 + an3
+print(output)
+anweightdata = (we1, we2,  we3, we4, we5, we6)
+if output >= 1.5:
+    output = 2
+    print(output)
+elif output >= 0.5:
+      output = 1
+      print(output) 
+else:
+    output = 0
+    print(output)
+
+anweightdata = (we1, we2,  we3, we4, we5, we6)
+
+if input == output:
+        print(anweightdata)
+else:
+        
+        print(input, output)
